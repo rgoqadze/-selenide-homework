@@ -21,9 +21,6 @@ public class SelenideTests {
 
     @Test
     public void CheckBox() {
-        Configuration.timeout = 2000;
-        Configuration.browser = "Chrome";
-        Configuration.browserSize = "1920x1080";
         open("/checkboxes");
         $("input[type=checkbox]",0).setSelected(true);
         $("input[type=checkbox]",0).shouldBe(type("checkbox"));
